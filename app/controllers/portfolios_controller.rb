@@ -4,9 +4,7 @@ class PortfoliosController < ApplicationController
   # GET /portfolios
   def index
     @portfolios = Portfolio.all
-    # options = {}
-    # options[:include] = [:stocks]
-    render json: PortfolioSerializer.new(@portfolios)
+    render json: @portfolios
   end
 
   # GET /portfolios/1

@@ -1,4 +1,3 @@
-class StockSerializer
-  include FastJsonapi::ObjectSerializer
+class StockSerializer < ActiveModel::Serializer
   attributes :company, :ticker, :sector, :price, :shares
 end
