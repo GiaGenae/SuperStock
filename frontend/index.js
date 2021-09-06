@@ -1,10 +1,57 @@
 document.addEventListener("DOMContentLoaded", () => {
-    fetchPortfolio()
+    fetchPortfolio();
+    buildForm()
 
 })
 
 const BASE_URL = "http://localhost:3000/"
-// create portfolio
+
+
+// create stock in portfolio
+function buildForm() {
+    let stockForm = document.getElementById("stocks-form")
+
+    stockForm.innerHTML +=
+    `
+    <form>
+    <label for ="company">Company:</label>
+    <input type="text" id="company">
+    <br>
+    <br>
+    <label for ="ticker">Ticker:</label>
+    <input type="text" id="ticker">
+    <br>
+    <br>
+    <label for ="sector">Sector:</label>
+    <select name="sector" id="sector">
+    <option value="" selected disabled hidden>Choose Here</option>
+    <option value="Communication Services">Communication Services</option>
+    <option value="Consumer Discretionary">Consumer Discretionary</option>
+    <option value="Consumer Staples">Consumer Staples</option>
+    <option value="Energy">Energy</option>
+    <option value="Financials">Financials</option>
+    <option value="Industrials">Industrials</option>
+    <option value="Information Technology">Information Technology</option>
+    <option value="Healthcare">Healthcare</option>
+    <option value="Materials">Materials</option>
+    <option value="Real Estate">Real Estate</option>
+    <option value="Utilities">Utilities</option>
+    </select>
+    <br>
+    <br>
+    <label for ="price">Price:</label>
+    <input type="text" id="price">
+    <br>
+    <br>
+    <label for ="shares">Shares:</label>
+    <input type="number" id="shares" min="1">
+    <br>
+    <br>
+    <input type="submit" value="Add Stock to Portfolio">
+    </form>
+    `
+}
+
 
 // read stocks in portfolio
 
