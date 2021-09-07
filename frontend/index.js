@@ -9,9 +9,9 @@ const BASE_URL = "http://localhost:3000/"
 
 // create stock in portfolio
 function buildForm() {
-    let stockForm = document.getElementById("stocks-form")
+    let stocksForm = document.getElementById("stocks-form")
 
-    stockForm.innerHTML +=
+    stocksForm.innerHTML +=
     `
     <form>
     <label for ="company">Company:</label>
@@ -49,9 +49,20 @@ function buildForm() {
     <br>
     <input type="submit" value="Add Stock to Portfolio">
     </form>
-    `
+   `
+    stocksForm.addEventListener("submit", stockFormSubmission)
 }
 
+function stockFormSubmission(){
+    event.preventDefault();
+    let company = document.getElementById("company").value
+    let ticker = document.getElementById("ticker").value
+    let sector = document.getElementById("sector").value
+    let price = document.getElementById("price").value
+    let shares = document.getElementById("shares").value
+    
+    console.log(company, ticker, sector, price, shares)
+}
 
 // read stocks in portfolio
 
