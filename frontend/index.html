@@ -6,38 +6,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> SuperStock </title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
-    <script src="index.js"></script>
-    <script src="src/portfolio.js"></script>
-    <script src="src/stock.js"></script>
 </head>
 <body>
     <nav class="navbar is-black">
         <div class="container">
-          <div id="navMenu" class="navbar-menu">
-            <div class="navbar-start">
-              <a class="navbar-item has-text-success is-size-1">
-                SuperStock
-              </a>
+            <div id="navMenu" class="navbar-menu">
+                <div class="navbar-start">
+                    <a class="navbar-item has-text-success is-size-1">
+                        SuperStock
+                    </a>
+                </div>
+                
+                <div class="navbar-end">
+                    <div class="navbar-item">
+                        <div class="button-view px-4">
+                            <div id="button-view">
+                                <a class="button is-success">View Portfolio</a>
+                            </div>
+                        </div>
+                        
+                        <div class="button-new">
+                            <a class="button is-success">Manage Portfolio</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-      
-            <div class="navbar-end">
-              <div class="navbar-item">
-                <div class="buttons">
-                  <a class="button is-success">View Portfolio</a>
-                  <a class="button is-success">Manage Portfolio</a>
+        </div>
+    </nav>
+    
+    <section class="hero is-link is-fullheight-with-navbar has-background-grey-darker">
+        <div class="hero-body">
+            <p class="title is-dark">Welcome to SuperStock. Take control of your finances and your</p>
+        </div>
+
+        <div class='container has-text-centered'>
+            <div class='columns is-mobile is-centered'>
+              <div class='column is-10'>
+                <div class="card has-background-black">
+                  <div class='card-header'>
+                    <div class="card-header-title has-text-success is-centered is-size-4">
+                      Energy
+                    </div>
+                  </div>
+                  <div class="card-content has-text-white">
+                    <p class='is-success'>
+                      <h1>
+                          Microsoft
+                      </h1>
+                      <h4>
+                          MSFT         
+                          Price: $105
+                          Shares: 4,000
+
+                      </h4>
+                    </p>
+          
+                  </div>
+                  <div>
+                    <footer class="card-footer has-text-danger">
+                        <a href="#" class="card-footer-item">Delete</a>
+                      </footer>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </nav>
-      
-      <section class="hero is-link is-fullheight-with-navbar has-background-grey-darker">
-        <div class="hero-body">
-          <p class="title is-dark">
-            Welcome to SuperStock, where you can manage your money.
-          </p>
-        </div>
-      </section>
+    </section>
+    <script src="index.js"></script>
+    <script src="src/portfolio.js"></script>
+    <script src="src/stock.js"></script>
 </body>
 </html>
