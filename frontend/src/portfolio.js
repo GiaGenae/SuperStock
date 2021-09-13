@@ -1,16 +1,8 @@
 class Portfolio{
-    constructor(investor){
+    constructor(id, investor, stocks){
+        this.id = id;
         this.investor = investor;
+        this.stocks = stocks;
     }
-
-    renderPortfolio() {
-        let portfoliosDiv = document.getElementById("portfolio-container")
-        
-        portfoliosDiv.innerHTML +=
-        `
-        <ul>
-        <h1>Investor: ${this.investor}</h1>
-        </ul>
-        `
-    }
+    //render Portfolio instance method
 }
