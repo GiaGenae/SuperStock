@@ -5,7 +5,6 @@ class CreateStocks < ActiveRecord::Migration[6.1]
       t.string :ticker
       t.string :sector
       t.float :price
-      t.integer :shares
       t.belongs_to :portfolio, null: false, foreign_key: true
 
       t.timestamps
